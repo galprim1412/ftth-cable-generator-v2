@@ -32,8 +32,8 @@ Calculate feeder cable length with:
 ### Option 1: Run from Source
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/cable-generator-v2.git
-cd cable-generator-v2
+git clone https://github.com/galprim1412/ftth-cable-generator-v2.git
+cd ftth-cable-generator-v2
 
 # Run application
 python cable_generator_figma.py
