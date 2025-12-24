@@ -2,8 +2,39 @@
 
 Modern cable generator application for EMR fiber optic projects with dark theme UI.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![License](https://img.shields.io/badge/License-Internal-red)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-Internal-red?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![GUI](https://img.shields.io/badge/GUI-Tkinter-orange?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/galprim1412/ftth-cable-generator-v2?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/galprim1412/ftth-cable-generator-v2?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/galprim1412/ftth-cable-generator-v2?style=for-the-badge)
+
+## 📸 Screenshots
+
+<details open>
+<summary><b>Cable Generator - Cluster</b></summary>
+
+![Cable Generator - Cluster](screenshot_cable_cluster_generator.png)
+</details>
+
+<details>
+<summary><b>Cable Generator - Feeder</b></summary>
+
+![Cable Generator - Feeder](screenshot_cable_feeder_generator.png)
+</details>
+
+<details>
+<summary><b>Cluster Description Calculator</b></summary>
+
+![Cluster Description](screenshot_cluster_description.png)
+</details>
+
+<details>
+<summary><b>Feeder Description Calculator</b></summary>
+
+![Feeder Description](screenshot_feeder_description.png)
+</details>
 
 ## 🎯 Features
 
