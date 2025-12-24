@@ -60,7 +60,6 @@ def build_macos():
         sys.executable, '-m', 'PyInstaller',
         '--onefile',
         '--windowed',
-        '--icon=app.ico',
         '--name=EMR Cable Generator',
         'cable_generator_figma.py',
         '--clean',
