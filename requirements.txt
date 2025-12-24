@@ -1,0 +1,8 @@
+# FTTH Cable Generator V2 - Requirements
+# Python 3.11+ required
+
+# Core dependencies (all built-in with Python)
+# tkinter - GUI framework (included with Python)
+
+# Build dependencies
+pyinstaller>=6.0.0

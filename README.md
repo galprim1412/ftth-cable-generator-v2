@@ -60,36 +60,109 @@ Calculate feeder cable length with:
 
 ## 📦 Installation
 
-### Option 1: Run from Source
+### Download Pre-built Executables
+
+Download the latest release for your platform:
+
+| Platform | Download | Requirements |
+|----------|----------|--------------|
+| 🪟 **Windows** | [EMR Cable Generator.exe](https://github.com/galprim1412/ftth-cable-generator-v2/releases/latest) | Windows 10/11 |
+| 🍎 **macOS** | [EMR Cable Generator.app](https://github.com/galprim1412/ftth-cable-generator-v2/releases/latest) | macOS 10.15+ |
+| 🐧 **Linux** | [cable-generator](https://github.com/galprim1412/ftth-cable-generator-v2/releases/latest) | Ubuntu 20.04+, Fedora 35+ |
+
+**Installation Steps:**
+
+<details>
+<summary><b>Windows</b></summary>
+
+1. Download `EMR Cable Generator.exe`
+2. Double-click to run (no installation needed)
+3. If Windows Defender blocks it, click "More info" → "Run anyway"
+</details>
+
+<details>
+<summary><b>macOS</b></summary>
+
+1. Download `EMR Cable Generator-macOS.zip`
+2. Extract and move to Applications folder
+3. Right-click → Open (first time only to bypass Gatekeeper)
+</details>
+
+<details>
+<summary><b>Linux</b></summary>
+
+1. Download `cable-generator`
+2. Make executable: `chmod +x cable-generator`
+3. Run: `./cable-generator`
+</details>
+
+### Build from Source
+
+**Requirements:** Python 3.11+
+
 ```bash
 # Clone repository
 git clone https://github.com/galprim1412/ftth-cable-generator-v2.git
 cd ftth-cable-generator-v2
 
-# Run application
+# Install dependencies
+pip install -r requirements.txt
+
+# Run from source
 python cable_generator_figma.py
+
+# OR build executable for your platform
+python build.py
 ```
 
-**Requirements:**
-- Python 3.11+
-- tkinter (built-in)
-
-### Option 2: Use Executable
-Download the latest release and run `EMR Cable Generator.exe` directly.
+For detailed build instructions, see [BUILD.md](docs/BUILD.md)
 
 ## 🔨 Building Executable
 
-To build your own .exe file:
+### Quick Build (Any Platform)
 
 ```bash
 # Install PyInstaller
 pip install pyinstaller
 
-# Build executable
-python -m PyInstaller --onefile --windowed --icon=app.ico --name="EMR Cable Generator" cable_generator_figma.py --clean
+# Build for your current platform
+python build.py
 ```
 
-Output will be in `dist/EMR Cable Generator.exe`
+### Platform-Specific Build Scripts
+
+**Windows:**
+```bash
+build_windows.bat
+```
+
+**macOS:**
+```bash
+chmod +x build_macos.sh
+./build_macos.sh
+```
+
+**Linux:**
+```bash
+chmod +x build_linux.sh
+./build_linux.sh
+```
+
+**Output locations:**
+- Windows: `dist/EMR Cable Generator.exe`
+- macOS: `dist/EMR Cable Generator.app`
+- Linux: `dist/cable-generator`
+
+For detailed build instructions and troubleshooting, see [BUILD.md](docs/BUILD.md)
+
+## ⚙️ Automated Builds
+
+This repository uses GitHub Actions to automatically build for all platforms:
+
+- **Trigger:** Push to `main` branch or create a tag
+- **Platforms:** Windows, macOS, Linux
+- **Download:** Go to [Actions](https://github.com/galprim1412/ftth-cable-generator-v2/actions) tab
+- **Releases:** Tagged versions automatically create releases with all platform builds
 
 ## 🎨 UI Features
 
