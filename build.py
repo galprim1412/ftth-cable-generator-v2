@@ -42,7 +42,7 @@ def build_windows():
     """Build Windows executable"""
     print("🪟 Building for Windows...")
     cmd = [
-        'pyinstaller',
+        sys.executable, '-m', 'PyInstaller',
         '--onefile',
         '--windowed',
         '--icon=app.ico',
@@ -57,7 +57,7 @@ def build_macos():
     """Build macOS application bundle"""
     print("🍎 Building for macOS...")
     cmd = [
-        'pyinstaller',
+        sys.executable, '-m', 'PyInstaller',
         '--onefile',
         '--windowed',
         '--icon=app.ico',
@@ -73,7 +73,7 @@ def build_linux():
     """Build Linux executable"""
     print("🐧 Building for Linux...")
     cmd = [
-        'pyinstaller',
+        sys.executable, '-m', 'PyInstaller',
         '--onefile',
         '--windowed',
         '--name=cable-generator',
