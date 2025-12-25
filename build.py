@@ -41,15 +41,30 @@ def clean_build():
 def build_windows():
     """Build Windows executable"""
     print("🪟 Building for Windows...")
-    cmd = [
-        sys.executable, '-m', 'PyInstaller',
-        '--onefile',
-        '--windowed',
-        '--icon=app.ico',
-        '--name=EMR Cable Generator',
-        'cable_generator_figma.py',
-        '--clean'
-    ]
+    
+    # Check if icon file exists
+    if not os.path.exists('app.ico'):
+        print("⚠️  Warning: app.ico not found, building without icon")
+        cmd = [
+            sys.executable, '-m', 'PyInstaller',
+            '--onefile',
+            '--windowed',
+            '--name=EMR Cable Generator',
+            'cable_generator_figma.py',
+            '--clean'
+        ]
+    else:
+        print("✅ Icon file found")
+        cmd = [
+            sys.executable, '-m', 'PyInstaller',
+            '--onefile',
+            '--windowed',
+            '--icon=app.ico',
+            '--name=EMR Cable Generator',
+            'cable_generator_figma.py',
+            '--clean'
+        ]
+    
     subprocess.run(cmd, check=True)
     print("✅ Windows build complete: dist/EMR Cable Generator.exe")
 
