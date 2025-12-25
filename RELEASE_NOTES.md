@@ -2,7 +2,7 @@
 
 ## 🎉 FTTH Cable Generator V2 - First Release
 
-**Release Date:** December 24, 2025
+**Release Date:** December 25, 2025
 
 ### Overview
 
