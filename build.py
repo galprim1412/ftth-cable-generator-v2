@@ -50,6 +50,11 @@ def build_windows():
             '--onefile',
             '--windowed',
             '--name=EMR Cable Generator',
+            '--hidden-import=tkinter',
+            '--hidden-import=tkinter.ttk',
+            '--hidden-import=tkinter.font',
+            '--hidden-import=tkinter.messagebox',
+            '--hidden-import=tkinter.filedialog',
             'cable_generator_figma.py',
             '--clean'
         ]
@@ -61,6 +66,11 @@ def build_windows():
             '--windowed',
             '--icon=app.ico',
             '--name=EMR Cable Generator',
+            '--hidden-import=tkinter',
+            '--hidden-import=tkinter.ttk',
+            '--hidden-import=tkinter.font',
+            '--hidden-import=tkinter.messagebox',
+            '--hidden-import=tkinter.filedialog',
             'cable_generator_figma.py',
             '--clean'
         ]

@@ -21,6 +21,11 @@ jobs:
       with:
         python-version: '3.11'
         
+    - name: Install system dependencies
+      run: |
+        # Windows runner should have tkinter, but let's verify
+        python -c "import tkinter; print('✅ tkinter available')"
+        
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
